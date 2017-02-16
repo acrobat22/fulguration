@@ -7,8 +7,11 @@ composer ==> https://getcomposer.org/doc/00-intro.md
 
 Use
 Symfony 2.8
-Initialisation du projet
 
+Initialisation du projet
+git clone https://github.com/acrobat22/fulguration.git
+ou
+git@github.com:acrobat22/fulguration.git
 
 cd fulguration
 composer install
