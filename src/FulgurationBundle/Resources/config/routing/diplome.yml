@@ -1,0 +1,19 @@
+diplome_index:
+    path:     /
+    defaults: { _controller: "FulgurationBundle:Diplome:index" }
+    methods:  GET
+
+diplome_new:
+    path:     /new
+    defaults: { _controller: "FulgurationBundle:Diplome:new" }
+    methods:  [GET, POST]
+
+diplome_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FulgurationBundle:Diplome:edit" }
+    methods:  [GET, POST]
+
+diplome_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FulgurationBundle:Diplome:delete" }
+    methods:  [GET, POST]

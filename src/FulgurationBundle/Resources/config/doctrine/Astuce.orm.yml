@@ -1,0 +1,39 @@
+FulgurationBundle\Entity\Astuce:
+    type: entity
+    table: null
+    repositoryClass: FulgurationBundle\Repository\AstuceRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        contenu:
+            type: text
+        actif:
+            type: boolean
+        dateCreate:
+            type: date
+            column: date_create
+
+    oneToMany:
+        enfant:
+            targetEntity: FulgurationBundle\Entity\Astuce
+            mappedBy: parent
+    manyToOne:
+        parent:
+            targetEntity: FulgurationBundle\Entity\Astuce
+            cascade: ["persist", "remove"]
+            inversedBy: enfant
+
+        categorie:
+            targetEntity: FulgurationBundle\Entity\Categorie
+            cascade: ["persist", "remove"]
+
+    lifecycleCallbacks: {  }
+
+

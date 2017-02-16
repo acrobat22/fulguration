@@ -1,0 +1,39 @@
+{% extends '@Fulguration/base.html.twig' %}
+
+{% block body %}
+
+<style>
+    a {
+        color: inherit;
+    }
+</style>
+<!--start intro-->
+<section class="text-center">
+    <h1 class="text-center">Modifier</h1>
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <input type="submit" value="Edit" />
+    {{ form_end(edit_form) }}
+
+    <ul class="text-center">
+        <li>
+            <a href="{{ path('diplome_index') }}"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a class="btn-floating btn-small waves-effect waves-light blue darken-1"
+               href="{{ path('diplome_delete', { 'id': diplome.id }) }}" onclick="return confirm('Êtes-vous sûr ?')">
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </a>
+
+           {#
+            {{ form_start(delete_form) }}
+
+
+            <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}#}
+        </li>
+    </ul>
+</section>
+{% endblock %}

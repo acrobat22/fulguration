@@ -1,0 +1,17 @@
+FulgurationBundle\Entity\Diplome:
+    type: entity
+    table: null
+    repositoryClass: FulgurationBundle\Repository\DiplomeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        date:
+            type: integer
+    lifecycleCallbacks: {  }

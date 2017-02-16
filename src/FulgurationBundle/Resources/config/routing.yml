@@ -1,0 +1,36 @@
+# ****************************************
+#    ASTUCES
+# ****************************************
+fulguration_astuce:
+    resource: "@FulgurationBundle/Resources/config/routing/astuce.yml"
+    prefix:   /astuce
+# ****************************************
+#    EXPERIENCES
+# ****************************************
+fulguration_experience:
+    resource: "@FulgurationBundle/Resources/config/routing/experience.yml"
+    prefix:   /experience
+# ****************************************
+#    REALISATIONS
+# ****************************************
+fulguration_realisation:
+    resource: "@FulgurationBundle/Resources/config/routing/realisation.yml"
+    prefix:   /realisation
+# ****************************************
+#    DIPLOMES
+# ****************************************
+fulguration_diplome:
+    resource: "@FulgurationBundle/Resources/config/routing/diplome.yml"
+    prefix:   /diplome
+# ****************************************
+#    CATEGORIES
+# ****************************************
+fulguration_categorie:
+        resource: "@FulgurationBundle/Resources/config/routing/categorie.yml"
+        prefix:   /categorie
+# ****************************************
+#    HOMEPAGE
+# ****************************************
+fulguration_homepage:
+    path:     /
+    defaults: { _controller: FulgurationBundle:Default:index }

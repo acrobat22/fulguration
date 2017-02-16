@@ -1,0 +1,20 @@
+FulgurationBundle\Entity\Realisation:
+    type: entity
+    table: null
+    repositoryClass: FulgurationBundle\Repository\RealisationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        description:
+            type: text
+        lien:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

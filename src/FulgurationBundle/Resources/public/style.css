@@ -1,0 +1,33 @@
+.navbar-inverse {
+    background-color: #8959A8 !important;
+    border-color: #764ca8 !important;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+    color: #fff;
+    background-color: #764ca8 !important;
+}
+
+html {
+    overflow-y: scroll;
+    /*font-family: "Lato", "Lucida Grande", "Tahoma", sans-serif;*/
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    /* pre IE9 */
+
+    font-size: 10px;
+    /* have to use px instead of %,
+    otherwise rem-sized images don't scale: http://stackoverflow.com/questions/13237782/safari-dosnt-calculate-rem-units-correct-when-scaling-with-media-width-height */
+
+    -webkit-text-size-adjust: 100%;
+    /* prevent webkit from resizing text */
+
+    -ms-text-size-adjust: 100%;
+}
+
+/*
+h1 {
+    font-family: 'Tangerine', serif !important;
+    font-size: 48px;
+    text-shadow: 4px 4px 4px #aaa;
+}*/

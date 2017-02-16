@@ -1,0 +1,24 @@
+experience_index:
+    path:     /
+    defaults: { _controller: "FulgurationBundle:Experience:index" }
+    methods:  GET
+
+experience_show:
+    path:     /{id}/show
+    defaults: { _controller: "FulgurationBundle:Experience:show" }
+    methods:  GET
+
+experience_new:
+    path:     /new
+    defaults: { _controller: "FulgurationBundle:Experience:new" }
+    methods:  [GET, POST]
+
+experience_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FulgurationBundle:Experience:edit" }
+    methods:  [GET, POST]
+
+experience_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FulgurationBundle:Experience:delete" }
+    methods:  DELETE

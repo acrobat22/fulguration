@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<!-- Website made by Nathalie Barenghi -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            {% block title %}Fulguration{% endblock %}
+        </title>
+
+
+        {% block stylesheets %}
+            {% stylesheets
+            '@FulgurationBundle/Resources/public/*.css'
+            '@FulgurationBundle/Resources/public/sass/*.scss'
+            filter='cssrewrite, scssphp' %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+            <!-- Bootstrap -->
+            <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+
+
+            {% endstylesheets %}
+
+            <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+            <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css" integrity="sha384-Wrgq82RsEean5tP3NK3zWAemiNEXofJsTwTyHmNb/iL3dP/sZJ4+7sOld1uqYJtE" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            {# FONTS #}
+            <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+            <link rel="stylesheet" type="text/css"
+                  href="https://fonts.googleapis.com/css?family=Tangerine">
+        {% endblock %}
+    </head>
+    <body>
+        {# HEADER #}
+        {% block header %}
+            {{ include("@Fulguration/Default/header.html.twig") }}
+        {% endblock %}
+
+        {# BODY #}
+        {% block body %}
+
+        {% endblock %}
+
+        {# FOOTER #}
+        {% block footer %}
+            {{ include("@Fulguration/Default/footer.html.twig") }}
+        {% endblock %}
+
+        {% block javascripts %}
+            <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script src="{{ asset('js/bootstrap.js') }}"></script>
+            {#<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>#}
+
+            {% javascripts '@FulgurationBundle/Resources/public/js/script.js' %}
+            <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,22 @@
+FulgurationBundle\Entity\Experience:
+    type: entity
+    table: null
+    repositoryClass: FulgurationBundle\Repository\ExperienceRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomEntreprise:
+            type: string
+            length: 255
+        dateDebut:
+            type: date
+        dateFin:
+            type: date
+        fonction:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

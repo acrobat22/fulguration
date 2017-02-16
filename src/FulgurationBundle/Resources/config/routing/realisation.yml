@@ -1,0 +1,24 @@
+realisation_index:
+    path:     /
+    defaults: { _controller: "FulgurationBundle:Realisation:index" }
+    methods:  GET
+
+realisation_show:
+    path:     /{id}/show
+    defaults: { _controller: "FulgurationBundle:Realisation:show" }
+    methods:  GET
+
+realisation_new:
+    path:     /new
+    defaults: { _controller: "FulgurationBundle:Realisation:new" }
+    methods:  [GET, POST]
+
+realisation_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FulgurationBundle:Realisation:edit" }
+    methods:  [GET, POST]
+
+realisation_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FulgurationBundle:Realisation:delete" }
+    methods:  DELETE

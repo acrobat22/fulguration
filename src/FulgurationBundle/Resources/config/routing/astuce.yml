@@ -1,0 +1,24 @@
+astuce_index:
+    path:     /
+    defaults: { _controller: "FulgurationBundle:Astuce:index" }
+    methods:  GET
+
+astuce_show:
+    path:     /{id}/show
+    defaults: { _controller: "FulgurationBundle:Astuce:show" }
+    methods:  GET
+
+astuce_new:
+    path:     /new
+    defaults: { _controller: "FulgurationBundle:Astuce:new" }
+    methods:  [GET, POST]
+
+astuce_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FulgurationBundle:Astuce:edit" }
+    methods:  [GET, POST]
+
+astuce_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FulgurationBundle:Astuce:delete" }
+    methods:  DELETE

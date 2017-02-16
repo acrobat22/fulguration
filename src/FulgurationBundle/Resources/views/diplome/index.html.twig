@@ -1,0 +1,47 @@
+{% extends '@Fulguration/base.html.twig' %}
+
+{% block body %}
+<style>
+    .aDiplome {
+        opacity: 1;
+        color: inherit;
+        /*color: red !important;*/
+    }
+</style>
+<!--start intro-->
+<section>
+    {#<hgroup>#}
+    <h1>Diplômes</h1>
+
+    <table class="table table-responsive table-striped">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Année</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for diplome in diplomes %}
+            <tr>
+                <td>{{ diplome.nom }}</td>
+                <td>{{ diplome.date }}</td>
+                <td>
+                    <a class="aDiplome"
+                       data-toggle="tooltip"
+                       title="Modifier"
+                       href="{{ path('diplome_edit', { 'id': diplome.id }) }}">
+                        <i class="fa fa-pencil pink" aria-hidden="true"></i>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul class="text-center">
+        <li>
+            <a class="aDiplome" href="{{ path('diplome_new') }}"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></a>
+        </li>
+    </ul>
+</section>
+{% endblock %}
