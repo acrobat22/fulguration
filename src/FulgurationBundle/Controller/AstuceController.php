@@ -27,29 +27,6 @@ class AstuceController extends Controller
         ));
     }
 
-    /**
-     * Creates a new astuce entity.
-     *
-     */
-    public function newAction(Request $request)
-    {
-        $astuce = new Astuce();
-        $form = $this->createForm('FulgurationBundle\Form\AstuceType', $astuce);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($astuce);
-            $em->flush($astuce);
-
-            return $this->redirectToRoute('astuce_show', array('id' => $astuce->getId()));
-        }
-
-        return $this->render('@Fulguration/astuce/new.html.twig', array(
-            'astuce' => $astuce,
-            'form' => $form->createView(),
-        ));
-    }
 
     /**
      * Finds and displays a astuce entity.

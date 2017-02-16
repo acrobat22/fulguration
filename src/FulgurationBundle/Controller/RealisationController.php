@@ -27,29 +27,6 @@ class RealisationController extends Controller
         ));
     }
 
-    /**
-     * Creates a new realisation entity.
-     *
-     */
-    public function newAction(Request $request)
-    {
-        $realisation = new Realisation();
-        $form = $this->createForm('FulgurationBundle\Form\RealisationType', $realisation);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($realisation);
-            $em->flush($realisation);
-
-            return $this->redirectToRoute('realisation_show', array('id' => $realisation->getId()));
-        }
-
-        return $this->render('@Fulguration/realisation/new.html.twig', array(
-            'realisation' => $realisation,
-            'form' => $form->createView(),
-        ));
-    }
 
     /**
      * Finds and displays a realisation entity.

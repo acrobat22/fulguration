@@ -15,22 +15,17 @@
             </tr>
             <tr>
                 <th>Actif</th>
-                <td>{% if categorie.actif %}Yes{% else %}No{% endif %}</td>
+                <td>{% if categorie.actif %}Oui{% else %}Non{% endif %}</td>
             </tr>
         </tbody>
     </table>
 
     <ul>
         <li>
-            <a href="{{ path('categorie_index') }}">Back to the list</a>
+            <a href="{{ path('categorie_index') }}">Retour à la liste</a>
         </li>
         <li>
-            <a href="{{ path('categorie_edit', { 'id': categorie.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
+            <a href="{{ path('categorie_edit', { 'id': categorie.id }) }}">Voir</a>
         </li>
     </ul>
 {% endblock %}

@@ -25,29 +25,6 @@ class DiplomeController extends Controller
         ));
     }
 
-    /**
-     * Creates a new diplome entity.
-     *
-     */
-    public function newAction(Request $request)
-    {
-        $diplome = new Diplome();
-        $form = $this->createForm('FulgurationBundle\Form\DiplomeType', $diplome);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($diplome);
-            $em->flush($diplome);
-
-            return $this->redirectToRoute('diplome_show', array('id' => $diplome->getId()));
-        }
-
-        return $this->render('@Fulguration/diplome/new.html.twig', array(
-            'diplome' => $diplome,
-            'form' => $form->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing diplome entity.

@@ -27,29 +27,6 @@ class CategorieController extends Controller
         ));
     }
 
-    /**
-     * Creates a new categorie entity.
-     *
-     */
-    public function newAction(Request $request)
-    {
-        $categorie = new Categorie();
-        $form = $this->createForm('FulgurationBundle\Form\CategorieType', $categorie);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($categorie);
-            $em->flush($categorie);
-
-            return $this->redirectToRoute('categorie_show', array('id' => $categorie->getId()));
-        }
-
-        return $this->render('categorie/new.html.twig', array(
-            'categorie' => $categorie,
-            'form' => $form->createView(),
-        ));
-    }
 
     /**
      * Finds and displays a categorie entity.

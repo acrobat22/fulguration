@@ -28,30 +28,6 @@ class ExperienceController extends Controller
     }
 
     /**
-     * Creates a new experience entity.
-     *
-     */
-    public function newAction(Request $request)
-    {
-        $experience = new Experience();
-        $form = $this->createForm('FulgurationBundle\Form\ExperienceType', $experience);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($experience);
-            $em->flush($experience);
-
-            return $this->redirectToRoute('experience_show', array('id' => $experience->getId()));
-        }
-
-        return $this->render('@Fulguration/experience/new.html.twig', array(
-            'experience' => $experience,
-            'form' => $form->createView(),
-        ));
-    }
-
-    /**
      * Finds and displays a experience entity.
      *
      */
